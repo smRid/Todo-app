@@ -1,6 +1,6 @@
 # Todo Application
 
-A simple and elegant web-based Todo application built with Spring Boot and Thymeleaf.
+A simple web-based Todo application built with Spring Boot and Thymeleaf.
 
 ## 🖼️ Preview
 
