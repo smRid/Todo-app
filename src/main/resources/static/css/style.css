@@ -1,0 +1,136 @@
+* {
+    font-family: 'Urbanist', sans-serif;
+}
+
+body {
+    background-color: #111;
+}
+
+.todo-container {
+    max-width: 400px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.todo-input {
+    border-radius: 30px 0 0 30px;
+    border: 1px solid #ccc; /* Add a visible border */
+    background-color: #f1f1f1;
+    padding: 0px 20px;
+}
+
+.todo-input:focus {
+    border: 1px solid #ff6a00; /* Optional: highlight with primary color */
+    box-shadow: none; /* Keep shadow disabled */
+    outline: none; /* Clean focus style */
+}
+
+.btn-add {
+    border-radius: 0 30px 30px 0;
+    background-color: #ff6a00;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent line break */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adds space between "ADD" and "+" */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+.btn-add:hover {
+    background-color: #e85c00;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* To push delete button to the right */
+    padding: 10px 0; /* Increased vertical padding for better spacing */
+    border-bottom: 1px solid #eee; /* Add a subtle separator */
+}
+
+.todo-item:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+.todo-content {
+    /* No longer need text-decoration here, it's on todo-link */
+    display: flex; /* Ensure the icon and text are flex items */
+    align-items: center;
+    flex-grow: 1; /* Allow content to take available space */
+}
+
+.todo-link {
+    display: flex; /* Make the link a flex container */
+    align-items: center; /* Vertically align icon and text */
+    text-decoration: none; /* Remove underline for the link */
+    color: inherit; /* Inherit text color from parent */
+    cursor: pointer; /* Indicate it's clickable */
+    flex-grow: 1; /* Allow the link to take up space for clicking */
+}
+
+.todo-text {
+    flex-grow: 1; /* Allows the text to take up available space */
+    margin-left: 10px; /* Space between icon and text */
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.check-icon {
+    color: orange;
+    font-size: 18px; /* Ensure consistent icon size */
+}
+
+.unchecked-icon {
+    color: #ff6a00;
+    font-size: 18px;
+}
+
+.delete-btn {
+    color: #666;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px; /* Match icon size */
+    padding: 5px; /* Add some padding for easier clicking */
+}
+
+.delete-btn:hover {
+    color: #dc3545; /* Red color on hover for delete */
+}
+
+
+.todo-list {
+    max-height: 300px; /* Set the maximum height */
+    overflow-y: auto; /* Enable vertical scrollbar if needed */
+    padding-right: 10px; /* Space for scrollbar */
+    padding-left: 0; /* Ensure no default padding from ul/ol if used */
+    list-style: none; /* Remove list bullet points if it were a list */
+}
+
+/* Optional: Add custom scrollbar styling (Optional aesthetic) */
+.todo-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.todo-list::-webkit-scrollbar-thumb {
+    background-color: #ff6a00;
+    border-radius: 10px;
+}
+
+.todo-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
